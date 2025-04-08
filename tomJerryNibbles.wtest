@@ -30,15 +30,20 @@ describe "Grupo de test de Tom y Jerry y Nibbles" {
     assert.equals(72, tom.energia())
 }
   test "comer a nibbles a velocidad 18.7 y energia 137" {
-    tom.correr(jerry)
+    tom.comer(jerry)
     tom.correr(24)
+    tom.comer(nibbles)
+    assert.equals(18.7, tom.velocidadMaxima())
+    assert.equals(137, tom.energia())
   }
 
   test "jerry cumple años tom lo come velmax 25.9 y energia 209" {
     tom.correr(jerry)
     tom.correr(24)
-    tom.correr(jerry)
-    assert.equals(14, tom.velocidadMaxima())
-    assert.equals(90, tom.energia())
+    tom.comer(nibbles)
+    jerry.cumplirAnios()
+    tom.comer(jerry)
+    assert.equals(25.9, tom.velocidadMaxima())
+    assert.equals(209, tom.energia())
   }
 }
