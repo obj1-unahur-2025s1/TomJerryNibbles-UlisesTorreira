@@ -54,3 +54,4 @@ object nibbles {
         peso = nuevoPeso
     }
  }
+Cambios aplicados!
